@@ -10,6 +10,7 @@ URL: http://www.dcs.shef.ac.uk/research/ilash/Moby/
 Group: Text tools
 Source: http://www.dcs.shef.ac.uk/research/ilash/Moby/mwords.tar.bz2
 BuildArchitectures: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildRequires: dos2unix
 
 %define _dict_dir /usr/share/dict/
