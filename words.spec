@@ -1,10 +1,9 @@
 %define version 3.0
-%define release %mkrel 2
 
 Summary: A dictionary of English words for the /usr/dict directory
 Name: words
 Version: %version
-Release: %release
+Release: %mkrel 3
 License: Public Domain
 URL: http://www.dcs.shef.ac.uk/research/ilash/Moby/
 Group: Text tools
