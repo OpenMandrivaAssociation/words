@@ -1,18 +1,16 @@
-%define version 3.0
+%define _dict_dir %{_datadir}/dict/
 
-Summary: A dictionary of English words for the /usr/dict directory
-Name: words
-Version: %version
-Release: %mkrel 3
-License: Public Domain
-URL: http://www.dcs.shef.ac.uk/research/ilash/Moby/
-Group: Text tools
-Source: http://www.dcs.shef.ac.uk/research/ilash/Moby/mwords.tar.bz2
-BuildArchitectures: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-root
-BuildRequires: dos2unix
-
-%define _dict_dir /usr/share/dict/
+Summary:	A dictionary of English words for the /usr/dict directory
+Name:		words
+Version:	3.0
+Release:	%mkrel 4
+License:	Public Domain
+Group:		Text tools
+URL:		http://www.dcs.shef.ac.uk/research/ilash/Moby/
+Source:		http://www.dcs.shef.ac.uk/research/ilash/Moby/mwords.tar.bz2
+BuildArch:	noarch
+BuildRequires:	dos2unix
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The words file is a dictionary of English words for the
@@ -50,19 +48,17 @@ daedal@myrealbox.com
 EOF
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
-install -d $RPM_BUILD_ROOT%{_datadir}/dict
-install -m644 mwords/moby $RPM_BUILD_ROOT%{_datadir}/dict/linux.words
-ln -sf linux.words $RPM_BUILD_ROOT%{_datadir}/dict/words
+install -d %{buildroot}%{_datadir}/dict
+install -m644 mwords/moby %{buildroot}%{_datadir}/dict/linux.words
+ln -sf linux.words %{buildroot}%{_datadir}/dict/words
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc  mwords/readme.txt mwords/license.txt
+%doc mwords/readme.txt mwords/license.txt
 %{_dict_dir}linux.words
 %{_dict_dir}words
-
-
