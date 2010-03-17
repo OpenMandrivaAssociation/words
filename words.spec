@@ -3,7 +3,7 @@
 Summary:	A dictionary of English words for the /usr/dict directory
 Name:		words
 Version:	3.0
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	Public Domain
 Group:		Text tools
 URL:		http://www.dcs.shef.ac.uk/research/ilash/Moby/
