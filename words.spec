@@ -6,7 +6,7 @@ Version:	3.0
 Release:	21
 License:	Public Domain
 Group:		Text tools
-URL:		http://www.dcs.shef.ac.uk/research/ilash/Moby/
+URL:		https://www.dcs.shef.ac.uk/research/ilash/Moby/
 Source:		http://www.dcs.shef.ac.uk/research/ilash/Moby/mwords.tar.bz2
 BuildArch:	noarch
 BuildRequires:	dos2unix
